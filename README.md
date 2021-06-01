@@ -13,8 +13,9 @@ User Stories:
 - User is able to become a seller
 - User can **edit/update/delete** profile page with what products they want to sell
 
-Roadmap:
+Roadmap (notion):
 https://www.notion.so/8eaece1b133047ef970861daa92868ef?v=c05e3a265b0f4259807d7d8287a320ff
+![Dripsy Roadmap](https://imgur.com/D9ItFdb.jpg)
 
 # Wireframe:
 Landing Page:
@@ -27,7 +28,7 @@ Profile Page:
 ![Dripsy Wireframe](https://imgur.com/10jzDYn.jpg)
 
 Product Page:
-![Dripsy Wireframe](https://imgur.com/undefined.jpg)
+![Dripsy Wireframe](https://imgur.com/aI7G5Qf.jpg)
 
 # ERD:
 ![Dripsy ERD](https://imgur.com/qksNhOX.jpg)
