@@ -15,7 +15,7 @@ User Stories:
 
 Roadmap (notion):
 https://www.notion.so/8eaece1b133047ef970861daa92868ef?v=c05e3a265b0f4259807d7d8287a320ff
-![Dripsy Roadmap](https://imgur.com/D9ItFdb.jpg)
+![Dripsy Roadmap](https://imgur.com/N0VPdCN.jpg)
 
 # Wireframe:
 Landing Page:
