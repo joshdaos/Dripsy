@@ -13,13 +13,13 @@ https://app.diagrams.net/
 
 # Wireframe:
 Landing Page:
-![Dripsy Wireframe]("https://imgur.com/D9ItFdb")
+![Dripsy Wireframe](https://imgur.com/D9ItFdb.jpg)
 
 Feed Page:
-![Dripsy Wireframe]("https://imgur.com/QqnqQB1")
+![Dripsy Wireframe](https://imgur.com/QqnqQB1.jpg)
 
 Profile Page:
-![Dripsy Wireframe]("https://imgur.com/10jzDYn")
+![Dripsy Wireframe](https://imgur.com/10jzDYn.jpg)
 
 Product Page:
-![Dripsy Wireframe]("https://imgur.com/undefined")
+![Dripsy Wireframe](https://imgur.com/undefined.jpg)
