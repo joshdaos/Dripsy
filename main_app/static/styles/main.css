@@ -14,3 +14,29 @@ h1 {
     font-size: 100px;
     background-color: rgba(0,0,0,0.4);
 }
+
+.video__content {
+   align-content: center;
+   text-align: center;
+}
+
+.josh__links {
+  font-size: 50px;
+  background-color: rgba(0,0,0,0.4);
+  color: white;
+  position: fixed;
+  width: 50%;
+  bottom: 10px;
+}
+
+.navbar {
+  background-color: #557977;
+  height: 75px;
+  font-size: large;
+  display: flex;
+  font-weight: bold;
+}
+
+.navbar-item {
+  color: white;
+}

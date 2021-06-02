@@ -1,4 +1,23 @@
 {% extends 'base.html' %} 
 {% block content %}
-<h1>Profile</h1>
+<h1 class="profile_title">{{user.username}}'s Profile</h1>
+<div class="profile_container">
+    <div class="gallery">
+        <a href="">
+            <div class="card">
+                <div class="card-image">
+                    <figure class="image is-square">
+                        <img class="profileimage" src="{{profile.image}}" alt="{{profile.name}}" />
+                    </figure>
+                </div>
+                <div class="card-header">
+                    <ul>
+                        <li class="card-header-title">{{profile.name}}</li>
+                        <li class="card-header-title">Bio: {{profile.bio}}</li>
+                    </ul>
+                </div>
+            </div>
+        </a>
+    </div>
+</div>
 {% endblock %}
