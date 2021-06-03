@@ -25,7 +25,7 @@ class SellersFollowed(Model):
     seller = ForeignKey(SellerProfile, on_delete=models.CASCADE, related_name="followers")
 
 
-class Products(Model):
+class Product(Model):
 
     SMALL = 'S'
     MEDIUM = 'M'

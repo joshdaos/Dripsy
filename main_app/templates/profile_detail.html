@@ -28,15 +28,68 @@
     </div>
     </div>
 </div>
+
 <div class="product">
     <h3>Products</h3>
+    <form class="mb-5" action="{% url 'product_create' profile.pk %}" method="post">
+        {% csrf_token %}
+        <div class="field has-addons">
+          <div class="control">
+            <input
+              class="input"
+              type="text"
+              name="name"
+              placeholder="Title"
+              required
+            />
+          </div>
+          <div class="control">
+            <input
+              class="input"
+              type="number"
+              name="sku"
+              placeholder="SKU #"
+              required
+            />
+          </div>
+          <div class="control">
+            <input
+              class="input"
+              type="text"
+              name="description"
+              placeholder="Description"
+              required
+            />
+          </div>
+          <div class="control">
+            <input
+              class="input"
+              type="text"
+              name="image"
+              placeholder="Image"
+              required
+            />
+          </div>
+          <div class="select is-primary">
+            <select name="size">
+              <option>Select Size</option>
+              <option value="SMALL">Small</option>
+              <option value="MEDIUM">Medium</option>
+              <option value="LARGE">Large</option>
+            </select>
+          </div>
+          <div class="control">
+            <input class="button is-primary" type="submit" value="Add Product" />
+          </div>
+        </div>
+      </form>
+      
     {% for product in profile.products.all %}
     <div class="gallery-image">
+        <a class="product-link" href="{% url 'product_detail' product.pk %}">
         <li><b class="product-title">{{product.name}}</b></li>
-        <li><b class="product-title">SKU: {{product.sku}}</b></li>
-        <li><b class="product-title">Description: {{product.description}}</b></li>
-        <li><b class="product-title">Size: {{product.size}}</b></li>
         <img class="product-image" src="{{product.image}}" alt="{{profile.name}}" />
+        </a>
     </div>
     {% empty %}
     <h3>No Posts Available Yet</h3>
