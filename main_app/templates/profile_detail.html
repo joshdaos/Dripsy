@@ -18,12 +18,20 @@
             <li class="card-header-title">{{profile.name}}</li>
             <li class="card-header-title">Bio: {{profile.bio}}</li>
         </ul>
+        <div class="buttons">
+            <a href="{% url 'profile_update' profile.pk %}" class="button is-info">
+                <span class="icon">
+                    <i class="fas fa-user-edit"></i>
+                </span>
+            </a>
+        </div>
+    </div>
     </div>
 </div>
 <div class="product">
     <h3>Products</h3>
     {% for product in profile.products.all %}
-    <div>
+    <div class="gallery-image">
         <li><b class="product-title">{{product.name}}</b></li>
         <li><b class="product-title">SKU: {{product.sku}}</b></li>
         <li><b class="product-title">Description: {{product.description}}</b></li>

@@ -3,6 +3,9 @@ from django.views import View
 from django.http import HttpResponse
 from django.views.generic.base import TemplateView
 from .models import SellerProfile
+from django.views.generic.edit import UpdateView
+
+
 # Create your views here.
 
 
@@ -18,6 +21,13 @@ class UserProfile(TemplateView):
         context = super().get_context_data(**kwargs)
         context["profile"] = SellerProfile.objects.get(user=self.request.user)
         return context
+
+
+class UserProfileUpdate(UpdateView):
+     model = SellerProfile
+     fields = ['name','bio','image']
+     template_name = "profile_update.html"
+     success_url ="/profile/" 
 
 
 class SellerList(TemplateView):
