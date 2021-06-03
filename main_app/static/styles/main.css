@@ -40,7 +40,8 @@ h1 {
 }
 
 .navbar {
-  background-color: #557977;
+  /* background-color: #557977; */
+  background: linear-gradient(to top, transparent 0%, black 150%);
   height: 75px;
   font-size: large;
   display: flex;
@@ -139,4 +140,8 @@ video {
 
 .button.is-info {
   background-color: #85e3de;
+}
+
+.product-link {
+  color: aliceblue;
 }

@@ -2,8 +2,11 @@ from django.shortcuts import render, redirect
 from django.views import View  
 from django.http import HttpResponse
 from django.views.generic.base import TemplateView
-from .models import SellerProfile, Products
+from django.views.generic.detail import DetailView
+from .models import SellerProfile, Product
 from django.views.generic.edit import UpdateView
+
+from main_app import models
 
 
 # Create your views here.
@@ -43,5 +46,10 @@ class ProductCreate(View):
         image = request.POST.get("image")
         size = request.POST.get("size")
         seller = SellerProfile.objects.get(pk=pk)
-        Products.objects.create(name=name, sku=sku, description=description, image=image, size=size, seller=seller)
+        Product.objects.create(name=name, sku=sku, description=description, image=image, size=size, seller=seller)
         return redirect('profile_detail')
+
+
+class ProductDetail(DetailView):
+    model = Product
+    template_name = "product_detail.html"
