@@ -41,6 +41,7 @@ class ProductCreate(View):
         sku = request.POST.get("sku")
         description = request.POST.get("description")
         image = request.POST.get("image")
+        size = request.POST.get("size")
         seller = SellerProfile.objects.get(pk=pk)
-        Products.objects.create(name=name, sku=sku, description=description, image=image, seller=seller)
+        Products.objects.create(name=name, sku=sku, description=description, image=image, size=size, seller=seller)
         return redirect('profile_detail')
