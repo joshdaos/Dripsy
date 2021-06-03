@@ -1,15 +1,22 @@
 {% extends 'base.html' %} 
 {% block content %}
-<h1>Dripsy Home</h1>
+<div class="home-container"></div>
+<a href="/feed"><h1 class="home">Dripsy Home</h1></a>
 <div class="video__content">
-    <video width="800px" height="500" controls>
-        <source src="https://player.vimeo.com/external/444928875.sd.mp4?s=4e8bc7aa7a6882a93db0b371b641a5420f0c8b8c&profile_id=139&oauth2_token_id=57447761.mp4" type="video/mp4">
+    <video playsinline autoplay muted loop>
+        <source src="/static/videos/pexels-yaroslav-shuraev-7644379.mp4" type="video/mp4">
     </video>
 </div>
 <div class="josh__links">
     <footer>
+        <a class="josh-link" href="https://www.linkedin.com/in/joshua-daos/">
         <i class="fab fa-linkedin"></i>
+        </a>
+
+        <a class="josh-link" href="https://git.generalassemb.ly/joshdaos">
         <i class="fab fa-github-square"></i>
+        </a>
     </footer>
+</div>
 </div>
 {% endblock %}

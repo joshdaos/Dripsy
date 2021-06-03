@@ -7,6 +7,7 @@ body{
     min-height: 100vh;
     background-repeat: no-repeat;
     background-size: 100% 100%;
+    /* background-image: url('https://i.imgur.com/I8cmcvT.jpg'); */
 }
 
 h1 {
@@ -22,11 +23,12 @@ h1 {
 
 .josh__links {
   font-size: 50px;
-  background-color: rgba(0,0,0,0.4);
+  /* background-color: rgba(0,0,0,0.4); */
+  /* width: 50%; */
   color: white;
   position: fixed;
-  width: 50%;
   bottom: 10px;
+  left: 150px;
 }
 
 .navbar {
@@ -66,4 +68,52 @@ h1 {
   border: solid 3px white;
   border-radius: 5px;
   box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.8);
+}
+
+.product {
+  color: aliceblue;
+}
+
+.product-image {
+  width: 150px;
+  height: 200px;
+}
+
+.product {
+  background-color: grey;
+}
+
+video {
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.home {
+  color: white;
+  font-size: 100px;
+  background-color: rgba(0,0,0,0.4);
+  z-index: 1;
+  position: fixed;
+  top: 40vh;
+  width: 50vw;
+  display: flex;
+  justify-content: center;
+  border-radius: 10px;
+  /* right: 50%; */
+  /* margin: auto; */
+}
+
+/* .home-container {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+} */
+
+.josh-link {
+  color: white;
 }

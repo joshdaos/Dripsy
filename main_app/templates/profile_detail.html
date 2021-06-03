@@ -20,4 +20,18 @@
         </ul>
     </div>
 </div>
+<div class="product">
+    <h3>Products</h3>
+    {% for product in profile.products.all %}
+    <div>
+        <li><b class="product-title">{{product.name}}</b></li>
+        <li><b class="product-title">SKU: {{product.sku}}</b></li>
+        <li><b class="product-title">Description: {{product.description}}</b></li>
+        <li><b class="product-title">Size: {{product.size}}</b></li>
+        <img class="product-image" src="{{product.image}}" alt="{{profile.name}}" />
+    </div>
+    {% empty %}
+    <h3>No Posts Available Yet</h3>
+    {% endfor %}
+</div>
 {% endblock %}
