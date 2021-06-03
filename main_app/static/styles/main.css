@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+
+body{
+    /* background-image: linear-gradient(
+		rgba(7, 2, 2, 0.45), 
+		rgba(1140, 18, 10, 0.1)
+	  ), url("https://images.unsplash.com/photo-1482160549825-59d1b23cb208?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80"); */
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    /* background-color: #f8f5f1; */
+    background-image: linear-gradient(
+      rgba(7, 2, 2, 0.45), 
+      rgba(1140, 18, 10, 0.1)
+      ), url("/main_app/static/images/dripsy-img.jpg");
+}
+
+h1 {
+    color: white;
+    font-size: 100px;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.video__content {
+   align-content: center;
+   text-align: center;
+}
+
+.josh__links {
+  font-size: 50px;
+  /* background-color: rgba(0,0,0,0.4); */
+  /* width: 50%; */
+  color: white;
+  position: fixed;
+  bottom: 10px;
+  left: 150px;
+}
+
+.navbar {
+  background-color: #557977;
+  height: 75px;
+  font-size: large;
+  display: flex;
+  font-weight: bold;
+}
+
+.navbar-item {
+  color: white;
+}
+.card {
+  margin-top: 25px;
+  width: 400px;
+  height: 100px;
+  border: 5px;
+}
+
+.profile_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.card-header {
+  background-color: aliceblue;
+  position: absolute;
+  left: 0;
+  width: 250px;
+  height: 150px;
+}
+
+.profileimage {
+  border: solid 3px white;
+  border-radius: 5px;
+  box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.8);
+}
+
+.product {
+  color: aliceblue;
+}
+
+.product-image {
+  width: 150px;
+  height: 200px;
+}
+
+.product {
+  font-size: 15px;
+}
+
+video {
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.home {
+  color: white;
+  font-size: 100px;
+  background-color: rgba(0,0,0,0.4);
+  z-index: 1;
+  position: fixed;
+  top: 40vh;
+  width: 50vw;
+  display: flex;
+  justify-content: center;
+  border-radius: 10px;
+  font-family: 'Lobster Two', cursive;
+  /* right: 50%; */
+  /* margin: auto; */
+}
+
+/* .home-container {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+} */
+
+.josh-link {
+  color: white;
+}
+
+.gallery-image {
+  margin: 5px;
+  border: 1px solid #ccc;
+  float: left;
+  width: 180px;
+  background-color: #557977;
+  position: relative;
+  top: 20vh;
+}
+
+.button.is-info {
+  background-color: #85e3de;
+}

@@ -30,7 +30,9 @@ class Products(Model):
     SMALL = 'S'
     MEDIUM = 'M'
     LARGE = 'L'
+    CLOTHING = 'Merch'
 
+    name = CharField(max_length=200, default=CLOTHING)
     sku = CharField(max_length=6)
     description = TextField(max_length=350)
     size_choices = [

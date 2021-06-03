@@ -1,4 +1,45 @@
 {% extends 'base.html' %} 
 {% block content %}
-<h1>Profile</h1>
+<h1 class="profile_title">{{user.username}}'s Profile</h1>
+<div class="profile_container">
+    <div class="gallery">
+        <a href="">
+            <div class="card">
+                <div class="card-image">
+                    <figure class="image is-square">
+                        <img class="profileimage" src="{{profile.image}}" alt="{{profile.name}}" />
+                    </figure>
+                </div>
+            </div>
+        </a>
+    </div>
+    <div class="card-header">
+        <ul>
+            <li class="card-header-title">{{profile.name}}</li>
+            <li class="card-header-title">Bio: {{profile.bio}}</li>
+        </ul>
+        <div class="buttons">
+            <a href="{% url 'profile_update' profile.pk %}" class="button is-info">
+                <span class="icon">
+                    <i class="fas fa-user-edit"></i>
+                </span>
+            </a>
+        </div>
+    </div>
+    </div>
+</div>
+<div class="product">
+    <h3>Products</h3>
+    {% for product in profile.products.all %}
+    <div class="gallery-image">
+        <li><b class="product-title">{{product.name}}</b></li>
+        <li><b class="product-title">SKU: {{product.sku}}</b></li>
+        <li><b class="product-title">Description: {{product.description}}</b></li>
+        <li><b class="product-title">Size: {{product.size}}</b></li>
+        <img class="product-image" src="{{product.image}}" alt="{{profile.name}}" />
+    </div>
+    {% empty %}
+    <h3>No Posts Available Yet</h3>
+    {% endfor %}
+</div>
 {% endblock %}
