@@ -28,8 +28,54 @@
     </div>
     </div>
 </div>
+
 <div class="product">
     <h3>Products</h3>
+    <form class="mb-5" action="{% url 'product_create' profile.pk %}" method="post">
+        {% csrf_token %}
+        <div class="field has-addons">
+          <div class="control">
+            <input
+              class="input"
+              type="text"
+              name="name"
+              placeholder="Title"
+              required
+            />
+          </div>
+          <div class="control">
+            <input
+              class="input"
+              type="number"
+              name="sku"
+              placeholder="SKU #"
+              required
+            />
+          </div>
+          <div class="control">
+            <input
+              class="input"
+              type="text"
+              name="description"
+              placeholder="Description"
+              required
+            />
+          </div>
+          <div class="control">
+            <input
+              class="input"
+              type="text"
+              name="image"
+              placeholder="Image"
+              required
+            />
+          </div>
+          <div class="control">
+            <input class="button is-primary" type="submit" value="Add Product" />
+          </div>
+        </div>
+      </form>
+      
     {% for product in profile.products.all %}
     <div class="gallery-image">
         <li><b class="product-title">{{product.name}}</b></li>

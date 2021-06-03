@@ -1,8 +1,8 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.views import View  
 from django.http import HttpResponse
 from django.views.generic.base import TemplateView
-from .models import SellerProfile
+from .models import SellerProfile, Products
 from django.views.generic.edit import UpdateView
 
 
@@ -34,3 +34,13 @@ class SellerList(TemplateView):
     template_name = "seller_list.html"
 
 
+class ProductCreate(View):
+
+    def post(self, request, pk):
+        name = request.POST.get("name")
+        sku = request.POST.get("sku")
+        description = request.POST.get("description")
+        image = request.POST.get("image")
+        seller = SellerProfile.objects.get(pk=pk)
+        Products.objects.create(name=name, sku=sku, description=description, image=image, seller=seller)
+        return redirect('profile_detail')
