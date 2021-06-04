@@ -133,7 +133,7 @@ video {
   border: 1px solid #ccc;
   float: left;
   width: 180px;
-  background-color: #557977;
+  background-color: rgba(0,0,0,0.4);
   position: relative;
   top: 20vh;
 }
@@ -145,3 +145,18 @@ video {
 .product-link {
   color: aliceblue;
 }
+
+.searchbar {
+  background-color: transparent;
+  color: white;
+  border: 3px solid white;
+  font-size: large;
+  margin-top: 15px;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.button.is-info {
+  margin-top: 15px;
+}
+
