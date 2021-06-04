@@ -35,6 +35,7 @@ class UserProfileUpdate(UpdateView):
 
 class SellerList(TemplateView):
     template_name = "seller_list.html"
+    # add context here
 
 
 class ProductCreate(View):
