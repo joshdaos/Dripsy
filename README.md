@@ -19,7 +19,7 @@ https://www.notion.so/8eaece1b133047ef970861daa92868ef?v=c05e3a265b0f4259807d7d8
 
 # Wireframe:
 Landing Page:
-![Dripsy Wireframe](https://imgur.com/D9ItFdb.jpg)
+![Dripsy Wireframe](https://imgur.com/2jjc24U.jpg)
 
 Feed Page:
 ![Dripsy Wireframe](https://imgur.com/QqnqQB1.jpg)

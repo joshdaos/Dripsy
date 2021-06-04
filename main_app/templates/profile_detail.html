@@ -30,7 +30,7 @@
 </div>
 
 <div class="product">
-    <h3>Products</h3>
+    <!-- <h3>Products</h3> -->
     <form class="mb-5" action="{% url 'product_create' profile.pk %}" method="post">
         {% csrf_token %}
         <div class="field has-addons">
@@ -83,16 +83,28 @@
           </div>
         </div>
       </form>
-      
+      <h2>Products</h2>
     {% for product in profile.products.all %}
     <div class="gallery-image">
         <a class="product-link" href="{% url 'product_detail' product.pk %}">
         <li><b class="product-title">{{product.name}}</b></li>
-        <img class="product-image" src="{{product.image}}" alt="{{profile.name}}" />
         </a>
+        <img class="product-image" src="{{product.image}}" alt="{{profile.name}}" />
+        <a href="{% url 'product_delete' product.pk %}" class="button is-danger">
+          <span class="icon">
+            <i class="fas fa-trash-alt"></i>
+          </span>
+        </a>
+        <div class="buttons">
+          <a href="{% url 'product_update' product.pk %}" class="button is-info">
+              <span class="icon">
+                <i class="far fa-edit"></i>
+              </span>
+          </a>
+      </div>
     </div>
     {% empty %}
-    <h3>No Posts Available Yet</h3>
+    <h3>No Products In Stock Yet</h3>
     {% endfor %}
 </div>
 {% endblock %}
