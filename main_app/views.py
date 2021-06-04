@@ -59,3 +59,12 @@ class ProductDelete(DeleteView):
     model = Product
     template_name = "product_delete.html"
     success_url = "/profile/"
+
+
+class ProductUpdate(UpdateView):
+    model = Product 
+    fields = ['name', 'sku', 'description', 'image', 'size']
+    template_name = "product_update.html"
+    success_url =  "/profile/"
+
+
