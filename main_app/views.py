@@ -4,7 +4,7 @@ from django.http import HttpResponse
 from django.views.generic.base import TemplateView
 from django.views.generic.detail import DetailView
 from .models import SellerProfile, Product
-from django.views.generic.edit import UpdateView
+from django.views.generic.edit import UpdateView, DeleteView
 
 from main_app import models
 
@@ -53,3 +53,9 @@ class ProductCreate(View):
 class ProductDetail(DetailView):
     model = Product
     template_name = "product_detail.html"
+
+
+class ProductDelete(DeleteView):
+    model = Product
+    template_name = "product_delete.html"
+    success_url = "/profile/"

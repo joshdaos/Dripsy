@@ -41,7 +41,7 @@ class Product(Model):
         (LARGE, 'Large'),
     ]
     size = CharField(
-        max_length=2,
+        max_length=200,
         choices=size_choices,
         default=SMALL,
     )
