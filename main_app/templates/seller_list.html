@@ -1,6 +1,6 @@
 {% extends 'base.html' %} 
 {% block content %}
-<h1>Feed</h1>
+<h1 class="header__css">Your Feed</h1>
 {% for product in profile.products.all %}
 <div class="gallery-image">
     <a class="product-link" href="{% url 'product_detail' product.pk %}">

@@ -14,7 +14,8 @@ body{
     background: linear-gradient(
       rgba(7, 2, 2, 0.45), 
       rgba(1140, 18, 10, 0.1)
-      );
+    );
+    color: whitesmoke;   
 }
 
 h1 {
@@ -22,6 +23,11 @@ h1 {
     font-size: 50px;
     /* background-color: rgba(0,0,0,0.4); */
     width: 45vw; 
+}
+
+.header__css {
+  border-bottom: 5px solid #f7f6e7;	
+  width: 100%;
 }
 
 .video__content {
@@ -182,4 +188,3 @@ video {
 .button.is-info {
   margin-top: 15px;
 }
-
