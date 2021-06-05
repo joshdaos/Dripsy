@@ -13,7 +13,7 @@ class SellerProfile(Model):
     name = CharField(max_length=100)
     bio = TextField(max_length=500)
     image = CharField(max_length=500)
-    user = ForeignKey(User, on_delete=models.CASCADE, related_name="user")
+    user = ForeignKey(User, on_delete=models.CASCADE, related_name="seller")
 
     def __str__(self):
         return self.name
