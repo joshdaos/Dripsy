@@ -29,11 +29,11 @@
     </div>
 </div>
 
-<div class="product">
+<div class="product__bar">
     <!-- <h3>Products</h3> -->
     <form class="mb-5" action="{% url 'product_create' profile.pk %}" method="post">
         {% csrf_token %}
-        <div class="field has-addons has-addons-centered">
+        <div class="field has-addons has-addons-centered" id="product__bar">
           <div class="control has-icons-left has-icons-right">
             <input
               class="input"
