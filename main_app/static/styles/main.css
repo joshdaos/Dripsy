@@ -26,7 +26,7 @@ h1 {
 }
 
 .header__css {
-  border-bottom: 5px solid #f7f6e7;	
+  border-bottom: 5px solid whitesmoke;	
   width: 100%;
 }
 
@@ -187,4 +187,21 @@ video {
 
 .button.is-info {
   margin-top: 15px;
+}
+
+.product__header {
+  font-size: 30px;
+}
+
+.about__header {
+  font-size: 25px;
+}
+
+.about__content {
+  text-align: left;
+  font-size: 20px;
+  padding: 50px;
+  margin: 50px;
+  background-color: rgba(0,0,0,0.4);
+  border-radius: 30px;
 }

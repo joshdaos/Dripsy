@@ -84,7 +84,7 @@
           </div>
         </div>
       </form>
-      <h2>Products</h2>
+      <h2 class="product__header">Products</h2>
     {% for product in profile.products.all %}
     <div class="gallery-image">
         <a class="product-link" href="{% url 'product_detail' product.pk %}">
