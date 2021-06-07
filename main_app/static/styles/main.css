@@ -253,3 +253,8 @@ video {
   width: auto;
   border: 3px solid white;
 }
+
+
+#seller__title {
+  color: white;
+}

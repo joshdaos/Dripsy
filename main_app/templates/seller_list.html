@@ -6,7 +6,9 @@
     <a class="product-link" href="{% url 'product_detail' product.pk %}">
     <b class="product-title">{{product.name}}</b>
     <img class="product-image" src="{{product.image}}" alt="{{profile.name}}" />
+    <b class="product-title">Seller: {{user.username}}</b>
     </a>
+    <!-- <a href="/profile" id="seller__title" class="product-title">Seller: {{user.username}}</a> -->
 </div>
 {% empty %}
 <h3>No Products In Stock Yet</h3>

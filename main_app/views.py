@@ -6,6 +6,11 @@ from django.views.generic.detail import DetailView
 from .models import SellerProfile, Product
 from django.views.generic.edit import UpdateView, DeleteView
 
+from django.contrib.auth.decorators import login_required
+from django.utils.decorators import method_decorator
+from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth import login
+
 from main_app import models
 
 
@@ -15,13 +20,47 @@ from main_app import models
 class Home(TemplateView):
 
     template_name = "home.html"
+    
+class Home(View):
+   
+    def get(self, request):
+        form = UserCreationForm()
+        context = {"form": form}
+        return render(request, "home.html", context)
 
 
+class Signup(View):
+
+    def get(self, request):
+        form = UserCreationForm()
+        context = {"form": form}
+        return render(request, "registration/signup.html", context)
+
+    def post(self, request):
+        
+        form = UserCreationForm(request.POST)
+
+        name = request.POST.get("name")
+        bio = request.POST.get("bio")
+        image = request.POST.get("image")
+    
+        if form.is_valid():
+            
+            user = form.save()
+            SellerProfile.objects.create(name=name, bio=bio, image=image, user=user)
+            login(request, user)
+            return redirect("profile_detail")
+        else:
+            context = {"form": form}
+            return render(request, "registration/signup.html", context)
+
+
+@method_decorator(login_required, name='dispatch')
 class About(TemplateView):
 
     template_name = "about.html"
 
-
+@method_decorator(login_required, name='dispatch')
 class UserProfile(TemplateView):
     template_name = "profile_detail.html"
 
@@ -37,7 +76,7 @@ class UserProfileUpdate(UpdateView):
      template_name = "profile_update.html"
      success_url ="/profile/" 
 
-
+@method_decorator(login_required, name='dispatch')
 class SellerList(TemplateView):
     template_name = "seller_list.html"
     # add context here
