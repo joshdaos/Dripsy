@@ -10,7 +10,27 @@
     </a>
     <!-- <a href="/profile" id="seller__title" class="product-title">Seller: {{user.username}}</a> -->
 </div>
+
+
 {% empty %}
 <h3>No Products In Stock Yet</h3>
 {% endfor %}
+
+<div class="follower">
+{% for follow in user.follows.all %}
+
+{% for product in follow.seller.products.all %}
+<div class="gallery-image">
+    <a class="product-link" href="{% url 'product_detail' product.pk %}">
+    <b class="product-title">{{product.name}}</b>
+    <img class="product-image" src="{{product.image}}" alt="{{profile.name}}" />
+    <b class="product-title">Seller: {{follow.seller.name}}</b>
+    </a>
+</div>
+
+{% endfor %}
+{% endfor %}
+</div>
+
+
 {% endblock %}
