@@ -1,6 +1,6 @@
 {% extends 'base.html' %} 
 {% block content %}
-<h1 class="profile_title">{{user.username}}'s Profile</h1>
+<h1 class="header__css">{{user.username}}'s Profile</h1>
 <div class="profile_container">
     <div class="gallery">
         <a href="">
@@ -29,12 +29,12 @@
     </div>
 </div>
 
-<div class="product">
+<div class="product__bar">
     <!-- <h3>Products</h3> -->
     <form class="mb-5" action="{% url 'product_create' profile.pk %}" method="post">
         {% csrf_token %}
-        <div class="field has-addons">
-          <div class="control">
+        <div class="field has-addons has-addons-centered" id="product__bar">
+          <div class="control has-icons-left has-icons-right">
             <input
               class="input"
               type="text"
@@ -43,7 +43,7 @@
               required
             />
           </div>
-          <div class="control">
+          <div class="control has-icons-left has-icons-right">
             <input
               class="input"
               type="number"
@@ -52,16 +52,17 @@
               required
             />
           </div>
-          <div class="control">
-            <input
+          <div class="control has-icons-left has-icons-right">
+            <textarea class="textarea" name="description" placeholder="Description" required></textarea>
+            <!-- <input
               class="input"
               type="text"
               name="description"
               placeholder="Description"
               required
-            />
+            /> -->
           </div>
-          <div class="control">
+          <div class="control has-icons-left has-icons-right">
             <input
               class="input"
               type="text"
@@ -83,11 +84,11 @@
           </div>
         </div>
       </form>
-      <h2>Products</h2>
+      <h2 class="product__header">Products</h2>
     {% for product in profile.products.all %}
     <div class="gallery-image">
         <a class="product-link" href="{% url 'product_detail' product.pk %}">
-        <li><b class="product-title">{{product.name}}</b></li>
+        <b class="product-title">{{product.name}}</b>
         </a>
         <img class="product-image" src="{{product.image}}" alt="{{profile.name}}" />
         <a href="{% url 'product_delete' product.pk %}" class="button is-danger">
