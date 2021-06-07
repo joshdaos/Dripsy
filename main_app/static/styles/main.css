@@ -165,14 +165,15 @@ video {
 
 .gallery-image {
   margin: 5px;
-  margin-left: 50px;
-  border: 1px solid #ccc;
+  margin-left: 45px;
+  border: 3px solid white;
   float: left;
   width: 180px;
   background-color: rgba(0,0,0,0.4);
   position: relative;
   top: 20vh;
   text-align: center;
+  box-shadow: 5px 5px 10px 5px black;
 }
 
 .button.is-info {
@@ -234,3 +235,21 @@ video {
   
 }
 
+.title {
+  color: white;
+}
+
+/* .product-title {
+  color: white;
+} */
+
+
+.update__product {
+  margin: auto;
+  width: 50%;
+  border: 3px solid white;
+  padding: 10px;
+  margin-top: 200px;
+  width: auto;
+  border: 3px solid white;
+}
