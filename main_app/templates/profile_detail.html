@@ -89,15 +89,16 @@
     <div class="gallery-image">
         <a class="product-link" href="{% url 'product_detail' product.pk %}">
         <b class="product-title">{{product.name}}</b>
-        </a>
         <img class="product-image" src="{{product.image}}" alt="{{profile.name}}" />
-        <a href="{% url 'product_delete' product.pk %}" class="button is-danger">
+        </a>
+        <div class="buttons">
+        <a href="{% url 'product_delete' product.pk %}" id="button__delete" class="button is-danger">
           <span class="icon">
             <i class="fas fa-trash-alt"></i>
           </span>
         </a>
-        <div class="buttons">
-          <a href="{% url 'product_update' product.pk %}" class="button is-info">
+        
+          <a href="{% url 'product_update' product.pk %}" id="button__edit" class="button is-info">
               <span class="icon">
                 <i class="far fa-edit"></i>
               </span>

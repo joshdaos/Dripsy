@@ -5,8 +5,8 @@
 <div class="gallery-image">
     <a class="product-link" href="{% url 'product_detail' product.pk %}">
     <b class="product-title">{{product.name}}</b>
-    </a>
     <img class="product-image" src="{{product.image}}" alt="{{profile.name}}" />
+    </a>
 </div>
 {% empty %}
 <h3>No Products In Stock Yet</h3>

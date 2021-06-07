@@ -165,6 +165,7 @@ video {
 
 .gallery-image {
   margin: 5px;
+  margin-left: 50px;
   border: 1px solid #ccc;
   float: left;
   width: 180px;
@@ -225,3 +226,11 @@ video {
 .link__color {
   color: #94fffa;
 }
+
+#button__delete {
+  /* margin: 0px 10px 5px 0px; */
+  /* width: 150px; */
+  margin-left: 40px;
+  
+}
+
