@@ -4,7 +4,7 @@
 {% for product in profile.products.all %}
 <div class="gallery-image">
     <a class="product-link" href="{% url 'product_detail' product.pk %}">
-    <li><b class="product-title">{{product.name}}</b></li>
+    <b class="product-title">{{product.name}}</b>
     </a>
     <img class="product-image" src="{{product.image}}" alt="{{profile.name}}" />
 </div>

@@ -102,6 +102,7 @@ h1 {
 .product-image {
   width: 150px;
   height: 200px;
+  padding: 10px;
 }
 
 #product__bar {
@@ -170,10 +171,12 @@ video {
   background-color: rgba(0,0,0,0.4);
   position: relative;
   top: 20vh;
+  text-align: center;
 }
 
 .button.is-info {
   background-color: #85e3de;
+  text-align: center;
 }
 
 .product-link {
@@ -188,10 +191,6 @@ video {
   margin-top: 15px;
   padding: 10px;
   border-radius: 10px;
-}
-
-.button.is-info {
-  margin-top: 15px;
 }
 
 .product__header {
@@ -213,4 +212,16 @@ video {
 
 .footer__links {
   font-size: 50px;
+}
+
+/* .product-image:hover {
+  content: url('');
+} */
+
+#search__button {
+  top: 15px;
+}
+
+.link__color {
+  color: #94fffa;
 }
