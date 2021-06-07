@@ -53,7 +53,7 @@
             />
           </div>
           <div class="control has-icons-left has-icons-right">
-            <textarea class="textarea" name="description" placeholder="Description" required></textarea>
+            <textarea class="input" name="description" placeholder="Description" required></textarea>
             <!-- <input
               class="input"
               type="text"
@@ -89,20 +89,58 @@
     <div class="gallery-image">
         <a class="product-link" href="{% url 'product_detail' product.pk %}">
         <b class="product-title">{{product.name}}</b>
-        </a>
         <img class="product-image" src="{{product.image}}" alt="{{profile.name}}" />
-        <a href="{% url 'product_delete' product.pk %}" class="button is-danger">
+        </a>
+        
+        <div class="buttons">
+
+        <a href="{% url 'product_delete' product.pk %}" id="button__delete" class="button is-danger">
           <span class="icon">
             <i class="fas fa-trash-alt"></i>
           </span>
         </a>
-        <div class="buttons">
-          <a href="{% url 'product_update' product.pk %}" class="button is-info">
-              <span class="icon">
-                <i class="far fa-edit"></i>
-              </span>
-          </a>
+        
+        <a href="{% url 'product_update' product.pk %}" id="button__edit" class="button is-info">
+          <span class="icon">
+            <i class="far fa-edit"></i>
+          </span>
+        </a>
       </div>
+
+
+      <!-- <div class="modal">
+        <div class="modal-background"></div>
+        <div class="modal-content">
+          <h1 class="title">Do you want to delete this Product? {{product.name}}?</h1>
+
+          <form method="post">
+            {% csrf_token %}
+            <div class="buttons">
+              <input class="button is-danger" type="submit" value="Confirm" />
+              <a class="button is-primary" href="{% url 'product_detail' product.pk %}"
+                >Cancel</a
+              >
+            </div>
+          </form>
+        </div>
+        <button class="modal-close is-large" aria-label="close"></button>
+      </div> -->
+
+      <!-- <div class="modal">
+        <div class="modal-background"></div>
+        <div class="modal-content">
+
+          <h1>Update {{product.name}}</h1>
+
+          <form action="{% url 'product_update' product.pk %}" method="post">
+              {% csrf_token %} {{form.as_p}} <input type="submit" value="Submit" />
+          </form>
+          
+        </div>
+        <button class="modal-close is-large" aria-label="close"></button>
+      </div> -->
+
+
     </div>
     {% empty %}
     <h3>No Products In Stock Yet</h3>
