@@ -22,7 +22,7 @@ Landing Page:
 ![Dripsy Wireframe](https://imgur.com/2jjc24U.jpg)
 
 Feed Page:
-![Dripsy Wireframe](https://imgur.com/QqnqQB1.jpg)
+![Dripsy Wireframe](https://imgur.com/PJc7qEX.jpg)
 
 Profile Page:
 ![Dripsy Wireframe](https://imgur.com/10jzDYn.jpg)
