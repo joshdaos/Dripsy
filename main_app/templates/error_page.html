@@ -1,9 +1,10 @@
 {% extends 'base.html' %} 
 {% block content %}
 
-<div class="">
+<div class="error__content">
     <h1 class="">Welcome to an ERROR</h1>
-    <p>Don't Panic! Press on Dripsy for a redo..</p>
+    <p>Don't Panic!<br> Press on Dripsy for a redo...</p>
 </div>
 <a class="back__button" href="{{request.META.HTTP_REFERER|escape}}">Back</a>
+
 {% endblock %}

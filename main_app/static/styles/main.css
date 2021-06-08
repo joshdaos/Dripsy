@@ -309,3 +309,13 @@ video {
   border-radius: 15px;
   color: white;
 }
+
+.error__content {
+  font-size: 50px;
+  margin: 100px;
+  background-color: rgba(99, 99, 99, 0.4);
+  border-radius: 15px;
+  border: 3px solid white;
+  padding: 10px;
+  
+}
