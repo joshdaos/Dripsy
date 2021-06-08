@@ -1,0 +1,23 @@
+{% extends 'base.html' %} 
+{% block content %}
+
+<h1 class="header__css">{{user.username}}</h1>
+
+<div class="seller__container">
+    <div class="seller__image">
+        <img class="" src="{{profile.image}}" alt="{{profile.name}}" />
+    </div>
+    <div class="seller__content">
+        <p class="">Name: {{profile.name}}<br><br>Bio: {{profile.bio}}</p>
+        <!-- <p class="">Bio: {{profile.bio}}</p> -->
+    </div>
+</div>
+<!-- <h1 class="header__css">Products</h1>
+<div class="gallery-image">
+    <b class="product-title">{{product.name}}</b>
+    <img class="product-image" src="{{product.image}}" alt="{{profile.name}}" />
+    </a>
+    <p id="seller__title" class="product-title">Seller: {{user.username}}</p>
+</div> -->
+
+{% endblock %}

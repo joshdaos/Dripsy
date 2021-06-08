@@ -3,7 +3,7 @@ from django.views import View
 from django.http import HttpResponse
 from django.views.generic.base import TemplateView
 from django.views.generic.detail import DetailView
-from .models import SellerProfile, Product
+from .models import SellerProfile, Product, SellersFollowed
 from django.views.generic.edit import UpdateView, DeleteView
 
 from django.contrib.auth.decorators import login_required
@@ -117,3 +117,21 @@ class ProductUpdate(UpdateView):
     success_url =  "/profile/"
 
 
+class SellerDetail(DetailView):
+    model = Product
+    template_name = "seller_detail.html"
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context["profile"] = SellerProfile.objects.get(user=self.request.user)
+        return context
+
+    # def get_context_data(self, **kwargs):
+    #     context = super().get_context_data(**kwargs)
+    #     context["profile"] = SellersFollowed.objects.get(user=self.request.user)
+    #     return context
+
+
+class ErrorPage(TemplateView):
+    
+    template_name = "error_page.html"
