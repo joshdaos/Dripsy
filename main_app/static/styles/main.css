@@ -107,7 +107,7 @@ h1 {
 
 #product__bar {
   font-size: 15px;
-  padding: 400px 0 0 0;
+  padding: 50px 0 0 0;
 }
 
 
@@ -164,16 +164,18 @@ video {
 }
 
 .gallery-image {
-  margin: 5px;
   margin-left: 45px;
   border: 3px solid white;
   float: left;
   width: 180px;
-  background-color: rgba(0,0,0,0.4);
+  background-color: rgba(99, 99, 99, 0.4);
   position: relative;
-  top: 20vh;
+  top: 10vh;
   text-align: center;
   box-shadow: 5px 5px 10px 5px black;
+  border-radius: 15px;
+  margin: 20px;
+  padding: 5px;
 }
 
 .button.is-info {
@@ -252,9 +254,30 @@ video {
   margin-top: 200px;
   width: auto;
   border: 3px solid white;
+  background-color: rgba(99, 99, 99, 0.4);
 }
-
 
 #seller__title {
   color: white;
+}
+
+.seller__container {
+  width: 50%;
+  border: 3px solid white;
+  padding: 10px;
+  margin-top: 50px;
+  width: auto;
+  border: 3px solid white;
+  display: flex;
+  background-color: rgba(99, 99, 99, 0.4);
+  border-radius: 15px;
+}
+
+.seller__image {
+  width: 500px;
+  padding: 10px;
+}
+
+.seller__content {
+  padding: 20px;
 }

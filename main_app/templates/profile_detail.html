@@ -1,7 +1,7 @@
 {% extends 'base.html' %} 
 {% block content %}
 <h1 class="header__css">{{user.username}}'s Profile</h1>
-<div class="profile_container">
+<!-- <div class="profile_container">
     <div class="gallery">
         <a href="">
             <div class="card">
@@ -27,10 +27,29 @@
         </div>
     </div>
     </div>
+</div> -->
+
+
+<div class="seller__container">
+  <div class="seller__image">
+      <img class="" src="{{profile.image}}" alt="{{profile.name}}" />
+  </div>
+  <div class="seller__content">
+      <p class="">Name: {{profile.name}}<br>Bio: {{profile.bio}}</p>
+  </div>
+  <div class="buttons">
+    <a href="{% url 'profile_update' profile.pk %}" class="button is-info">
+        <span class="icon">
+            <i class="fas fa-user-edit"></i>
+        </span>
+    </a>
+  </div>  
 </div>
 
+
+
+
 <div class="product__bar">
-    <!-- <h3>Products</h3> -->
     <form class="mb-5" action="{% url 'product_create' profile.pk %}" method="post">
         {% csrf_token %}
         <div class="field has-addons has-addons-centered" id="product__bar">
@@ -106,40 +125,6 @@
           </span>
         </a>
       </div>
-
-
-      <!-- <div class="modal">
-        <div class="modal-background"></div>
-        <div class="modal-content">
-          <h1 class="title">Do you want to delete this Product? {{product.name}}?</h1>
-
-          <form method="post">
-            {% csrf_token %}
-            <div class="buttons">
-              <input class="button is-danger" type="submit" value="Confirm" />
-              <a class="button is-primary" href="{% url 'product_detail' product.pk %}"
-                >Cancel</a
-              >
-            </div>
-          </form>
-        </div>
-        <button class="modal-close is-large" aria-label="close"></button>
-      </div> -->
-
-      <!-- <div class="modal">
-        <div class="modal-background"></div>
-        <div class="modal-content">
-
-          <h1>Update {{product.name}}</h1>
-
-          <form action="{% url 'product_update' product.pk %}" method="post">
-              {% csrf_token %} {{form.as_p}} <input type="submit" value="Submit" />
-          </form>
-          
-        </div>
-        <button class="modal-close is-large" aria-label="close"></button>
-      </div> -->
-
 
     </div>
     {% empty %}
