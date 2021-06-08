@@ -1,41 +1,13 @@
 {% extends 'base.html' %} 
 {% block content %}
 <h1 class="header__css">{{user.username}}'s Profile</h1>
-<!-- <div class="profile_container">
-    <div class="gallery">
-        <a href="">
-            <div class="card">
-                <div class="card-image">
-                    <figure class="image is-square">
-                        <img class="profileimage" src="{{profile.image}}" alt="{{profile.name}}" />
-                    </figure>
-                </div>
-            </div>
-        </a>
-    </div>
-    <div class="card-header">
-        <ul>
-            <li class="card-header-title">{{profile.name}}</li>
-            <li class="card-header-title">Bio: {{profile.bio}}</li>
-        </ul>
-        <div class="buttons">
-            <a href="{% url 'profile_update' profile.pk %}" class="button is-info">
-                <span class="icon">
-                    <i class="fas fa-user-edit"></i>
-                </span>
-            </a>
-        </div>
-    </div>
-    </div>
-</div> -->
-
 
 <div class="seller__container">
   <div class="seller__image">
       <img class="" src="{{profile.image}}" alt="{{profile.name}}" />
   </div>
   <div class="seller__content">
-      <p class="">Name: {{profile.name}}<br>Bio: {{profile.bio}}</p>
+      <p class="">Name: {{profile.name}}<br><br>Bio: {{profile.bio}}</p>
   </div>
   <div class="buttons">
     <a href="{% url 'profile_update' profile.pk %}" class="button is-info">
@@ -45,8 +17,6 @@
     </a>
   </div>  
 </div>
-
-
 
 
 <div class="product__bar">
@@ -99,7 +69,7 @@
             </select>
           </div>
           <div class="control">
-            <input class="button is-primary" type="submit" value="Add Product" />
+            <input id="add__product" class="button is-primary" type="submit" value="Add Product" />
           </div>
         </div>
       </form>

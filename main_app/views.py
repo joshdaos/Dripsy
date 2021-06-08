@@ -128,5 +128,10 @@ class SellerDetail(DetailView):
 
     # def get_context_data(self, **kwargs):
     #     context = super().get_context_data(**kwargs)
-    #     context["seller"] = SellersFollowed.objects.get(user=self.request.user)
+    #     context["profile"] = SellersFollowed.objects.get(user=self.request.user)
     #     return context
+
+
+class ErrorPage(TemplateView):
+    
+    template_name = "error_page.html"
