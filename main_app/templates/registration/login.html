@@ -1,11 +1,11 @@
 {% extends 'base.html' %} {% block content %}
-<div class="update__product">
-<h1 class="title">Log In</h1>
-<form method="post" action="{% url 'login' %}">
+<div class="login__container">
+<h1 class="login__title">Log In</h1>
+<form class="login__form" method="post" action="{% url 'login' %}">
   {% csrf_token %} {{ form.as_p }}
-  <input type="submit" class="btn" value="login" />
+  <input type="submit" class="btn" value="Login" />
   <input type="hidden" name="next" value="{{ next }}" />
 </form>
 </div>
-<a class="back__button" href="{{request.META.HTTP_REFERER|escape}}">Back</a>
+<a id="back__button-login" class="back__button" href="{{request.META.HTTP_REFERER|escape}}">Back</a>
 {% endblock %}
