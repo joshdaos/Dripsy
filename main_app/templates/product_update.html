@@ -6,4 +6,5 @@
     {% csrf_token %} {{form.as_p}} <input type="submit" value="Submit" />
 </form>
 </div>
+<a class="back__button" href="{{request.META.HTTP_REFERER|escape}}">Back</a>
 {% endblock %}

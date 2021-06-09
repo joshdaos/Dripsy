@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from django.views import View  
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpResponseNotFound
 from django.views.generic.base import TemplateView
 from django.views.generic.detail import DetailView
 from .models import SellerProfile, Product, SellersFollowed
@@ -135,3 +135,4 @@ class SellerDetail(DetailView):
 class ErrorPage(TemplateView):
     
     template_name = "error_page.html"
+
