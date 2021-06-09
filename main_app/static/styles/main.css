@@ -205,6 +205,15 @@ video {
   border-radius: 10px;
 }
 
+#search__button {
+  top: 15px;
+  padding: 20px;
+  background: transparent;
+  border: 3px solid white;
+  /* background: linear-gradient(to right, rgb(61, 213, 255) , rgb(167, 255, 234)); */
+  border-radius: 10px;
+}
+
 .product__header {
   font-size: 30px;
 }
@@ -230,10 +239,6 @@ video {
   content: url('');
 } */
 
-#search__button {
-  top: 15px;
-  background: linear-gradient(to right, rgb(61, 213, 255) , rgb(167, 255, 234));
-}
 
 .link__color {
   color: #94fffa;
@@ -317,5 +322,104 @@ video {
   border-radius: 15px;
   border: 3px solid white;
   padding: 10px;
-  
 }
+
+.login__form {
+  text-align: center;
+}
+
+.login__container {
+  background-color: rgba(99, 99, 99, 0.4);
+  width: 50vh;
+  border: 3px solid white;
+  padding: 10px;
+  margin-top: 100px;
+  margin-left: 20%;
+}
+
+.login__title {
+  font-size: 30px;
+  /* text-decoration: underline; */
+}
+
+#id_username {
+  background-color: transparent;
+  border: 1px solid white;
+  padding: 3px;
+  margin: 10px;
+  border-radius: 5px;
+}
+
+#id_password {
+  background-color: transparent;
+  border: 1px solid white;
+  padding: 3px;
+  margin: 10px;
+  border-radius: 5px;
+}
+
+input.btn {
+  border: 3px solid white;
+  background-color: transparent;
+  color: white;
+  border-radius: 5px;
+}
+
+#back__button-login {
+  margin-left: 20%;
+}
+
+.signup__container {
+  background-color: rgba(99, 99, 99, 0.4);
+  width: 50vh;
+  border: 3px solid white;
+  padding: 10px;
+  margin-top: 100px;
+  margin-left: 20%;
+}
+
+#back__button-signup {
+  margin-left: 20%;
+}
+
+#id_password1 {
+  background-color: transparent;
+  border: 1px solid white;
+  padding: 3px;
+  margin: 10px;
+  border-radius: 5px;
+}
+
+#id_password2 {
+  background-color: transparent;
+  border: 1px solid white;
+  padding: 3px;
+  margin: 10px;
+  border-radius: 5px;
+}
+
+.signup__input {
+  background-color: transparent;
+  border: 1px solid white;
+  padding: 3px;
+  margin: 10px;
+  border-radius: 5px;
+}
+
+/* .input {
+  background-color: transparent;
+  border: 1px solid white;
+  padding: 3px;
+  margin: 10px;
+  border-radius: 5px;
+} */
+
+.profile__update {
+  background-color: rgba(99, 99, 99, 0.4);
+  width: 50vh;
+  border: 3px solid white;
+  padding: 10px;
+  margin-top: 100px;
+  margin-left: 20%;
+}
+

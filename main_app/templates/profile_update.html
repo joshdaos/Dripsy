@@ -1,5 +1,5 @@
 {% extends 'base.html' %} {% block content %}
-<div class="update__product">
+<div class="profile__update">
 <h1>Update {{profile.name}}</h1>
 
 <form action="" method="post">
@@ -8,3 +8,4 @@
 </div>
 <a class="back__button" href="{{request.META.HTTP_REFERER|escape}}">Back</a>
 {% endblock %}
+
