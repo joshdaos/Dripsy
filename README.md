@@ -1,5 +1,7 @@
 # Dripsy - Capstone Project
 
+Demo the App [Here!](https://git.heroku.com/dripsyproject.git)
+
 Scope: Build a eCommerce Social Media Site to connect young sellers & buyers.
 - Focus is to provide a platform similar to depop 
 - Where buyers can buy trendy clothes for reasonable prices
