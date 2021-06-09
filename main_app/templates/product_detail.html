@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="update__product">
+<div class="product_container">
+    <div class="">
+        <div class="content_container">
+            <h1 class="post_title">{{product.name}}</h1>
+                <img class="product-image" src="{{product.image}}" alt="{{profile.name}}" />
+            </div>
+        </div>
+    <div class="content-container">
+        <li><b class="product">Size: {{product.size}}</b></li> 
+        <li><b class="product">SKU: {{product.sku}}</b></li>
+        <p class="">{{product.description}}</p>
+    </div>
+</div>
+</div>
+<a class="back__button" href="{{request.META.HTTP_REFERER|escape}}">Back</a>
+{% endblock %}

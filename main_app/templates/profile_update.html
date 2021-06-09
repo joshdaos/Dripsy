@@ -1,0 +1,11 @@
+{% extends 'base.html' %} {% block content %}
+<div class="profile__update">
+<h1>Update {{profile.name}}</h1>
+
+<form action="" method="post">
+    {% csrf_token %} {{form.as_p}} <input type="submit" value="Submit" />
+</form>
+</div>
+<a class="back__button" href="{{request.META.HTTP_REFERER|escape}}">Back</a>
+{% endblock %}
+
