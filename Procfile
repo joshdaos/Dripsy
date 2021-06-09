@@ -1,1 +1,1 @@
-web: gunicorn {DRIPSY}.wsgi
+web: gunicorn DRIPSY.wsgi
