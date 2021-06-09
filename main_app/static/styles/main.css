@@ -405,3 +405,21 @@ input.btn {
   margin: 10px;
   border-radius: 5px;
 }
+
+/* .input {
+  background-color: transparent;
+  border: 1px solid white;
+  padding: 3px;
+  margin: 10px;
+  border-radius: 5px;
+} */
+
+.profile__update {
+  background-color: rgba(99, 99, 99, 0.4);
+  width: 50vh;
+  border: 3px solid white;
+  padding: 10px;
+  margin-top: 100px;
+  margin-left: 20%;
+}
+
