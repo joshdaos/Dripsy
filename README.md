@@ -45,6 +45,11 @@ Product Page:
 # ERD:
 ![Dripsy ERD](https://imgur.com/qksNhOX.jpg)
 
+# Code Snippets:
+![Dripsy Snippets](https://imgur.com/VjoFytk.jpg)
+
+![Dripsy Snippets](https://i.imgur.com/u7moy9N.jpg)
+
 # Technologies:
 - Django
 - PostgreSql
