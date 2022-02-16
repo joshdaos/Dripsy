@@ -1,4 +1,4 @@
-# Dripsy - Capstone Project
+# Dripsy 
 
 Click [Here](https://dripsyproject.herokuapp.com/) for a demo!
 
